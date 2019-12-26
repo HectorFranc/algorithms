@@ -10,10 +10,9 @@ class Queue:
             raise IndexError('Queue is full')
 
     def deQueue(self):
-        if len(self.queueList) != 0:
+        if not self._queueIsEmpty():
             element = self.queueList[0]
             self.queueList = self.queueList[1:]
-
             return element
         else:
             raise IndexError('Queue is empty')
@@ -23,3 +22,6 @@ class Queue:
             return len(self.queueList) < self.maxElements
         else:
             return False
+
+    def _queueIsEmpty(self):
+        return len(self.queueList) == 0
