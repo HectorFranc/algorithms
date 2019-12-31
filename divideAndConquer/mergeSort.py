@@ -34,6 +34,23 @@ def merge(lst, low, high, mid_high):
 
 
 def merge_sort(lst, min_inclusive=0, max_inclusive=None):
+    '''
+    Merge sort algorithm.
+
+    Parameters:
+
+    - lst: list
+
+        List to be sorted.
+
+    - min_inclusive: int, optional, default: 0
+
+        Minimum index of sub-list to be sorted.
+
+    - max_inclusive: int, optional, default: len(lst) - 1
+
+        Maximum index of sub-list to be sorted.
+    '''
     if max_inclusive is None:
         max_inclusive = len(lst) - 1
 
