@@ -31,3 +31,14 @@ def merge(lst, low, high, mid_high):
         lst[index_lst] = temp_high[index_temp_high]
         index_lst += 1
         index_temp_high += 1
+
+
+def merge_sort(lst, min_inclusive=0, max_inclusive=None):
+    if max_inclusive is None:
+        max_inclusive = len(lst) - 1
+
+    # If not in base case: list has not 0 or 1 element (are not already ordered)
+    if min_inclusive < max_inclusive:
+        merge_sort(lst, min_inclusive, (min_inclusive + max_inclusive) // 2)
+        merge_sort(lst, (min_inclusive + max_inclusive) // 2 + 1, max_inclusive)
+        merge(lst, min_inclusive, max_inclusive, (min_inclusive + max_inclusive) // 2 + 1)
