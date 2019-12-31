@@ -4,7 +4,7 @@ def _swap(lst, indexA, indexB):
     lst[indexB] = temp
 
 
-def own_sort(lst):
+def bubble_sort(lst):
     actual_max_index = len(lst) - 1
     while actual_max_index > 0:
         for i in range(0, actual_max_index):
