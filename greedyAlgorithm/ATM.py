@@ -1,4 +1,17 @@
 def ATM(coin_list=[], cost=0, __actual_run=1):
+    '''
+    ATM algorithm.
+
+    Parameters:
+
+    - coin_list: list, optional
+
+        List of available coins for ATM.
+
+    - cost: number, optional
+
+        The total cost.
+    '''
     coin_list = sorted(coin_list, reverse=True)
 
     # List of coins that will be returned
